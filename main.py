@@ -1,15 +1,10 @@
-from datetime import datetime, timedelta
-from brdates import Datas
 
-hoje = Datas()
-print(hoje.tempo_cadastro())
+from acess_cep import BuscaEndereco
+cep = "62886410"
+objeto_cep = BuscaEndereco(cep)
 
-
-
-
-
-
-
+bairro, cidade, uf = objeto_cep.acessa_via_cep()
+print(bairro, cidade, uf)
 
 #>>>>>>>>>>>>>LISTA DE CARACTERES IMPORTANRTES PARA SE TRABALHAR COM REGEX<<<<<<<<<<<<<<<<<
 # []	Define um range ou um grupo de caracteres	                    [0-9]; [a-z]; [abc]
